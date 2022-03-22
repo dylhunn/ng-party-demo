@@ -1,0 +1,11 @@
+body {
+    max-width: 70ch;
+    padding: 1em 1em;
+    margin: auto;
+    line-height: 1.1;
+    font-family: sans-serif;
+}
+
+h1 {
+    margin: 0;
+}

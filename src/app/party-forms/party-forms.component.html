@@ -1,0 +1,25 @@
+<div class="party-form" [formGroup]="party">
+    <h3>Address</h3>
+    <div formGroupName="address">
+        <label>
+            House Number
+            <input type="number" formControlName="house">
+        </label>
+        <label>
+            Street Name
+            <input type="text" formControlName="street">
+        </label>
+    </div>
+    <h3>Attendance Information</h3>
+    <label>
+        Formal Attire?
+        <input type="checkbox" formControlName="formal">
+    </label>
+    <h3>Food Options</h3>
+    <div formArrayName="foodOptions">
+        <div *ngFor="let item of party.controls.foodOptions.controls; let i=index">
+            <input type="text" [formControlName]="i">
+        </div>
+        <button (click)="addMenuItem()">Add Another Menu Item</button>
+    </div>
+</div>
